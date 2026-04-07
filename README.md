@@ -34,18 +34,18 @@ cp target/release/spoke-cli /usr/local/bin/spoke-cli
 Credentials are loaded from a `.env` file in the current working directory:
 
 ```env
-KNOWLEDGE_GRAPH_URI=bolt://spokedev.cgl.ucsf.edu:7687
-KNOWLEDGE_GRAPH_USERNAME=neo4j
-KNOWLEDGE_GRAPH_PASSWORD=SPOKEdev
-KNOWLEDGE_GRAPH_DATABASE=spoke
+KNOWLEDGE_GRAPH_URI=bolt://<host>:<port>
+KNOWLEDGE_GRAPH_USERNAME=<username>
+KNOWLEDGE_GRAPH_PASSWORD=<password>
+KNOWLEDGE_GRAPH_DATABASE=<database>
 ```
 
-| Variable                   | Description                    | Example                             |
-|----------------------------|--------------------------------|-------------------------------------|
-| `KNOWLEDGE_GRAPH_URI`      | Bolt URI to the Neo4j instance | `bolt://spokedev.cgl.ucsf.edu:7687` |
-| `KNOWLEDGE_GRAPH_USERNAME` | Neo4j username                 | `neo4j`                             |
-| `KNOWLEDGE_GRAPH_PASSWORD` | Neo4j password                 | `SPOKEdev`                          |
-| `KNOWLEDGE_GRAPH_DATABASE` | Target database name           | `spoke`                             |
+| Variable                   | Description                    | Example                      |
+|----------------------------|--------------------------------|------------------------------|
+| `KNOWLEDGE_GRAPH_URI`      | Bolt URI to the Neo4j instance | `bolt://<host>:<port>`       |
+| `KNOWLEDGE_GRAPH_USERNAME` | Neo4j username                 | `<username>`                 |
+| `KNOWLEDGE_GRAPH_PASSWORD` | Neo4j password                 | `<password>`                 |
+| `KNOWLEDGE_GRAPH_DATABASE` | Target database name           | `<database>`                 |
 
 ## Commands
 
@@ -58,10 +58,10 @@ spoke-cli test-connection
 ```
 
 ```
-Connecting to bolt://spokedev.cgl.ucsf.edu:7687 ... OK
-  uri      : bolt://spokedev.cgl.ucsf.edu:7687
-  database : spoke
-  user     : neo4j
+Connecting to bolt://<host>:<port> ... OK
+  uri      : bolt://<host>:<port>
+  database : <database>
+  user     : <username>
 ```
 
 ### `glimpse-knowledge-graph`
